@@ -1,0 +1,935 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jaredhanson/passport-twitter#readme"
+
+    >passport-twitter (v1.0.4)</a>
+</h1>
+<h4>Twitter authentication strategy for Passport.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter">module passport-twitter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.Strategy">
+            function <span class="apidocSignatureSpan">passport-twitter.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_">
+            function <span class="apidocSignatureSpan">passport-twitter.</span>super_
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-twitter.</span>super_.InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.super_">
+            function <span class="apidocSignatureSpan">passport-twitter.</span>super_.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-twitter.</span>profile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-twitter.</span>super_.InternalOAuthError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-twitter.</span>super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-twitter.</span>super_.super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter.profile">module passport-twitter.profile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.profile.parse">
+            function <span class="apidocSignatureSpan">passport-twitter.profile.</span>parse
+            <span class="apidocSignatureSpan">(json)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter.super_">module passport-twitter.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.super_">
+            function <span class="apidocSignatureSpan">passport-twitter.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.</span>InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.Strategy">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter.super_.InternalOAuthError">module passport-twitter.super_.InternalOAuthError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.InternalOAuthError.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.</span>InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter.super_.InternalOAuthError.prototype">module passport-twitter.super_.InternalOAuthError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.InternalOAuthError.prototype.toString">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.InternalOAuthError.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter.super_.prototype">module passport-twitter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.prototype._createOAuthError">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>_createOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.prototype._loadUserProfile">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>_loadUserProfile
+            <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.prototype.parseErrorResponse">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>parseErrorResponse
+            <span class="apidocSignatureSpan">(body, status)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.prototype.requestTokenParams">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>requestTokenParams
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.prototype.userAuthorizationParams">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>userAuthorizationParams
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.prototype.userProfile">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>userProfile
+            <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter.super_.super_">module passport-twitter.super_.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.super_.super_">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.super_.Strategy">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.super_.</span>Strategy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter.super_.super_.prototype">module passport-twitter.super_.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-twitter.super_.super_.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-twitter.super_.super_.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter" id="apidoc.module.passport-twitter">module passport-twitter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.Strategy" id="apidoc.element.passport-twitter.Strategy">
+        function <span class="apidocSignatureSpan">passport-twitter.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  options = options || {};
+  options.requestTokenURL = options.requestTokenURL || &#x27;https://api.twitter.com/oauth/request_token&#x27;;
+  options.accessTokenURL = options.accessTokenURL || &#x27;https://api.twitter.com/oauth/access_token&#x27;;
+  options.userAuthorizationURL = options.userAuthorizationURL || &#x27;https://api.twitter.com/oauth/authenticate&#x27;;
+  options.sessionKey = options.sessionKey || &#x27;oauth:twitter&#x27;;
+
+  OAuthStrategy.call(this, options, verify);
+  this.name = &#x27;twitter&#x27;;
+  this._userProfileURL = options.userProfileURL || &#x27;https://api.twitter.com/1.1/account/verify_credentials.json&#x27;;
+  this._skipExtendedUserProfile = (options.skipExtendedUserProfile !== undefined) ? options.skipExtendedUserProfile : false;
+  this._includeEmail = (options.includeEmail !== undefined) ? options.includeEmail : false;
+  this._includeStatus = (options.includeStatus !== undefined) ? options.includeStatus : true;
+  this._includeEntities = (options.includeEntities !== undefined) ? options.includeEntities : true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_" id="apidoc.element.passport-twitter.super_">
+        function <span class="apidocSignatureSpan">passport-twitter.</span>super_
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuthStrategy(options, verify) {
+  if (typeof options == &#x27;function&#x27;) {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError(&#x27;OAuthStrategy requires a verify callback&#x27;); }
+  if (!options.requestTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a requestTokenURL option&#x27;); }
+  if (!options.accessTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a accessTokenURL option&#x27;); }
+  if (!options.userAuthorizationURL) { throw new TypeError(&#x27;OAuthStrategy requires a userAuthorizationURL option&#x27;); }
+  if (!options.consumerKey) { throw new TypeError(&#x27;OAuthStrategy requires a consumerKey option&#x27;); }
+  if (options.consumerSecret === undefined) { throw new TypeError(&#x27;OAuthStrategy requires a consumerSecret option&#x27;); }
+
+  passport.Strategy.call(this);
+  this.name = &#x27;oauth&#x27;;
+  this._verify = verify;
+
+  // NOTE: The _oauth property is considered &#x22;protected&#x22;.  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth = new OAuth(options.requestTokenURL, options.accessTokenURL,
+                          options.consumerKey,  options.consumerSecret,
+                          &#x27;1.0&#x27;, null, options.signatureMethod || &#x27;HMAC-SHA1&#x27;,
+                          null, options.customHeaders);
+
+  this._userAuthorizationURL = options.userAuthorizationURL;
+  this._callbackURL = options.callbackURL;
+  this._key = options.sessionKey || &#x27;oauth&#x27;;
+  this._requestTokenStore = options.requestTokenStore || new SessionRequestTokenStore({ key: this._key });
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.InternalOAuthError" id="apidoc.element.passport-twitter.super_.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-twitter.</span>super_.InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.super_" id="apidoc.element.passport-twitter.super_.super_">
+        function <span class="apidocSignatureSpan">passport-twitter.</span>super_.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter.profile" id="apidoc.module.passport-twitter.profile">module passport-twitter.profile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.profile.parse" id="apidoc.element.passport-twitter.profile.parse">
+        function <span class="apidocSignatureSpan">passport-twitter.profile.</span>parse
+        <span class="apidocSignatureSpan">(json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (json) {
+  if (&#x27;string&#x27; == typeof json) {
+    json = JSON.parse(json);
+  }
+
+  var profile = {};
+  profile.id = String(json.id);
+  if (json.id_str) { profile.id = json.id_str; }
+  profile.username = json.screen_name;
+  profile.displayName = json.name;
+  if (json.email) {
+    profile.emails = [{ value: json.email }];
+  }
+  profile.photos = [{ value: json.profile_image_url_https }];
+
+  return profile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {object|string} json
+ * @return {object}
+ * @api public
+ */
+exports.parse = function(json) {
+if (&#x27;string&#x27; == typeof json) {
+  json = JSON.<span class="apidocCodeKeywordSpan">parse</span>(json);
+}
+
+var profile = {};
+profile.id = String(json.id);
+if (json.id_str) { profile.id = json.id_str; }
+profile.username = json.screen_name;
+profile.displayName = json.name;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter.super_" id="apidoc.module.passport-twitter.super_">module passport-twitter.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.super_" id="apidoc.element.passport-twitter.super_.super_">
+        function <span class="apidocSignatureSpan">passport-twitter.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.InternalOAuthError" id="apidoc.element.passport-twitter.super_.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.</span>InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.Strategy" id="apidoc.element.passport-twitter.super_.Strategy">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuthStrategy(options, verify) {
+  if (typeof options == &#x27;function&#x27;) {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError(&#x27;OAuthStrategy requires a verify callback&#x27;); }
+  if (!options.requestTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a requestTokenURL option&#x27;); }
+  if (!options.accessTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a accessTokenURL option&#x27;); }
+  if (!options.userAuthorizationURL) { throw new TypeError(&#x27;OAuthStrategy requires a userAuthorizationURL option&#x27;); }
+  if (!options.consumerKey) { throw new TypeError(&#x27;OAuthStrategy requires a consumerKey option&#x27;); }
+  if (options.consumerSecret === undefined) { throw new TypeError(&#x27;OAuthStrategy requires a consumerSecret option&#x27;); }
+
+  passport.Strategy.call(this);
+  this.name = &#x27;oauth&#x27;;
+  this._verify = verify;
+
+  // NOTE: The _oauth property is considered &#x22;protected&#x22;.  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth = new OAuth(options.requestTokenURL, options.accessTokenURL,
+                          options.consumerKey,  options.consumerSecret,
+                          &#x27;1.0&#x27;, null, options.signatureMethod || &#x27;HMAC-SHA1&#x27;,
+                          null, options.customHeaders);
+
+  this._userAuthorizationURL = options.userAuthorizationURL;
+  this._callbackURL = options.callbackURL;
+  this._key = options.sessionKey || &#x27;oauth&#x27;;
+  this._requestTokenStore = options.requestTokenStore || new SessionRequestTokenStore({ key: this._key });
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter.super_.InternalOAuthError" id="apidoc.module.passport-twitter.super_.InternalOAuthError">module passport-twitter.super_.InternalOAuthError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.InternalOAuthError.InternalOAuthError" id="apidoc.element.passport-twitter.super_.InternalOAuthError.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.</span>InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter.super_.InternalOAuthError.prototype" id="apidoc.module.passport-twitter.super_.InternalOAuthError.prototype">module passport-twitter.super_.InternalOAuthError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.InternalOAuthError.prototype.toString" id="apidoc.element.passport-twitter.super_.InternalOAuthError.prototype.toString">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.InternalOAuthError.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var m = this.name;
+  if (this.message) { m += &#x27;: &#x27; + this.message; }
+  if (this.oauthError) {
+    if (this.oauthError instanceof Error) {
+      m = this.oauthError.toString();
+    } else if (this.oauthError.statusCode &#x26;&#x26; this.oauthError.data) {
+      m += &#x27; (status: &#x27; + this.oauthError.statusCode + &#x27; data: &#x27; + this.oauthError.data + &#x27;)&#x27;;
+    }
+  }
+  return m;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter.super_.prototype" id="apidoc.module.passport-twitter.super_.prototype">module passport-twitter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.prototype._createOAuthError" id="apidoc.element.passport-twitter.super_.prototype._createOAuthError">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>_createOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createOAuthError = function (message, err) {
+  var e;
+  if (err.statusCode &#x26;&#x26; err.data) {
+    try {
+      e = this.parseErrorResponse(err.data, err.statusCode);
+    } catch (_) {}
+  }
+  if (!e) { e = new InternalOAuthError(message, err); }
+  return e;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.prototype._loadUserProfile" id="apidoc.element.passport-twitter.super_.prototype._loadUserProfile">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>_loadUserProfile
+        <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_loadUserProfile = function (token, tokenSecret, params, done) {
+  var self = this;
+
+  function loadIt() {
+    return self.userProfile(token, tokenSecret, params, done);
+  }
+  function skipIt() {
+    return done(null);
+  }
+
+  if (typeof this._skipUserProfile == &#x27;function&#x27; &#x26;&#x26; this._skipUserProfile.length &#x3e; 1) {
+    // async
+    this._skipUserProfile(token, tokenSecret, function(err, skip) {
+      if (err) { return done(err); }
+      if (!skip) { return loadIt(); }
+      return skipIt();
+    });
+  } else {
+    var skip = (typeof this._skipUserProfile == &#x27;function&#x27;) ? this._skipUserProfile() : this._skipUserProfile;
+    if (!skip) { return loadIt(); }
+    return skipIt();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.prototype.authenticate" id="apidoc.element.passport-twitter.super_.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  options = options || {};
+
+  var self = this;
+  var meta = {
+    requestTokenURL: this._oauth._requestUrl,
+    accessTokenURL: this._oauth._accessUrl,
+    userAuthorizationURL:  this._userAuthorizationURL,
+    consumerKey: this._oauth._consumerKey
+  }
+
+  if (req.query &#x26;&#x26; req.query.oauth_token) {
+    // The request being authenticated contains an oauth_token parameter in the
+    // query portion of the URL.  This indicates that the service provider has
+    // redirected the user back to the application, after authenticating the
+    // user and obtaining their authorization.
+    //
+    // The value of the oauth_token parameter is the request token.  Together
+    // with knowledge of the token secret (stored in the session), the request
+    // token can be exchanged for an access token and token secret.
+    //
+    // This access token and token secret, along with the optional ability to
+    // fetch profile information from the service provider, is sufficient to
+    // establish the identity of the user.
+    var oauthToken = req.query.oauth_token;
+
+    function loaded(err, oauthTokenSecret, state) {
+      if (err) { return self.error(err); }
+      if (!oauthTokenSecret) {
+        return self.fail(state, 403);
+      }
+
+      // NOTE: The oauth_verifier parameter will be supplied in the query portion
+      //       of the redirect URL, if the server supports OAuth 1.0a.
+      var oauthVerifier = req.query.oauth_verifier || null;
+
+      self._oauth.getOAuthAccessToken(oauthToken, oauthTokenSecret, oauthVerifier, function(err, token, tokenSecret, params) {
+        if (err) { return self.error(self._createOAuthError(&#x27;Failed to obtain access token&#x27;, err)); }
+
+        function destroyed(err) {
+          if (err) { return self.error(err); }
+
+          self._loadUserProfile(token, tokenSecret, params, function(err, profile) {
+            if (err) { return self.error(err); }
+
+            function verified(err, user, info) {
+              if (err) { return self.error(err); }
+              if (!user) { return self.fail(info); }
+
+              info = info || {};
+              if (state) { info.state = state; }
+              self.success(user, info);
+            }
+
+            try {
+              if (self._passReqToCallback) {
+                var arity = self._verify.length;
+                if (arity == 6) {
+                  self._verify(req, token, tokenSecret, params, profile, verified);
+                } else { // arity == 5
+                  self._verify(req, token, tokenSecret, profile, verified);
+                }
+              } else {
+                var arity = self._verify.length;
+                if (arity == 5) {
+                  self._verify(token, tokenSecret, params, profile, verified);
+                } else { // arity == 4
+                  self._verify(token, tokenSecret, profile, verified);
+                }
+              }
+            } catch (ex) {
+              return self.error(ex);
+            }
+          });
+        }
+
+        // The request token has been exchanged for an access token.  Since the
+        // request token is a single-use token, that data can be removed from the
+        // store.
+        try {
+          var arity = self._requestTokenStore.destroy.length;
+          if (arity == 4) {
+            self._requestTokenStore.destroy(req, oauthToken, meta, destroyed);
+          } else { // arity == 3
+            self._requestTokenStore.destroy(req, oauthToken, destroyed);
+          }
+        } catch (ex) {
+          return self.error(ex);
+        }
+      });
+    }
+
+    try {
+      var arity = self._requestTokenStore.get.length;
+      if (arity == 4) {
+        this._requestTokenStore.get(req, oauthToken, meta, loaded);
+      } else { // arity == 3
+        this._requestTokenStore.get(req, oauthToken, loaded);
+      }
+    } catch (ex) {
+      return this.error(ex);
+    }
+  } else {
+    // In order to authenticate via OAuth, the application must obtain a request
+    // token from the service provider and redirect th ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return cb(err, user);
+    });
+  }
+));
+
+#### Authenticate Requests
+
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;twitter&#x27;` strategy, to
+authenticate requests.
+
+For example, as route middleware in an [Express](http://expressjs.com/)
+application:
+
+app.get(&#x27;/auth/twitter&#x27;,
+  passport.authenticate(&#x27;twitter&#x27;));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.prototype.parseErrorResponse" id="apidoc.element.passport-twitter.super_.prototype.parseErrorResponse">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>parseErrorResponse
+        <span class="apidocSignatureSpan">(body, status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseErrorResponse = function (body, status) {
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.prototype.requestTokenParams" id="apidoc.element.passport-twitter.super_.prototype.requestTokenParams">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>requestTokenParams
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requestTokenParams = function (options) {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.prototype.userAuthorizationParams" id="apidoc.element.passport-twitter.super_.prototype.userAuthorizationParams">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>userAuthorizationParams
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">userAuthorizationParams = function (options) {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.prototype.userProfile" id="apidoc.element.passport-twitter.super_.prototype.userProfile">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.prototype.</span>userProfile
+        <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">userProfile = function (token, tokenSecret, params, done) {
+  return done(null, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter.super_.super_" id="apidoc.module.passport-twitter.super_.super_">module passport-twitter.super_.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.super_.super_" id="apidoc.element.passport-twitter.super_.super_.super_">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.super_.Strategy" id="apidoc.element.passport-twitter.super_.super_.Strategy">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.super_.</span>Strategy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-twitter.super_.super_.prototype" id="apidoc.module.passport-twitter.super_.super_.prototype">module passport-twitter.super_.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-twitter.super_.super_.prototype.authenticate" id="apidoc.element.passport-twitter.super_.super_.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-twitter.super_.super_.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  throw new Error(&#x27;Strategy#authenticate must be overridden by subclass&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return cb(err, user);
+    });
+  }
+));
+
+#### Authenticate Requests
+
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;twitter&#x27;` strategy, to
+authenticate requests.
+
+For example, as route middleware in an [Express](http://expressjs.com/)
+application:
+
+app.get(&#x27;/auth/twitter&#x27;,
+  passport.authenticate(&#x27;twitter&#x27;));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
