@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/jaredhanson/passport-twitter#readme"
-
-    >passport-twitter (v1.0.4)</a>
+    <a href="https://github.com/jaredhanson/passport-twitter#readme">passport-twitter (v1.0.4)</a>
 </h1>
 <h4>Twitter authentication strategy for Passport.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.passport-twitter">module passport-twitter</a><ol>
 
@@ -539,14 +532,14 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
   options = options || {};
-  options.requestTokenURL = options.requestTokenURL || &#x27;https://api.twitter.com/oauth/request_token&#x27;;
-  options.accessTokenURL = options.accessTokenURL || &#x27;https://api.twitter.com/oauth/access_token&#x27;;
-  options.userAuthorizationURL = options.userAuthorizationURL || &#x27;https://api.twitter.com/oauth/authenticate&#x27;;
-  options.sessionKey = options.sessionKey || &#x27;oauth:twitter&#x27;;
+  options.requestTokenURL = options.requestTokenURL || 'https://api.twitter.com/oauth/request_token';
+  options.accessTokenURL = options.accessTokenURL || 'https://api.twitter.com/oauth/access_token';
+  options.userAuthorizationURL = options.userAuthorizationURL || 'https://api.twitter.com/oauth/authenticate';
+  options.sessionKey = options.sessionKey || 'oauth:twitter';
 
   OAuthStrategy.call(this, options, verify);
-  this.name = &#x27;twitter&#x27;;
-  this._userProfileURL = options.userProfileURL || &#x27;https://api.twitter.com/1.1/account/verify_credentials.json&#x27;;
+  this.name = 'twitter';
+  this._userProfileURL = options.userProfileURL || 'https://api.twitter.com/1.1/account/verify_credentials.json';
   this._skipExtendedUserProfile = (options.skipExtendedUserProfile !== undefined) ? options.skipExtendedUserProfile : false;
   this._includeEmail = (options.includeEmail !== undefined) ? options.includeEmail : false;
   this._includeStatus = (options.includeStatus !== undefined) ? options.includeStatus : true;
@@ -566,14 +559,14 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
   options = options || {};
-  options.requestTokenURL = options.requestTokenURL || &#x27;https://api.twitter.com/oauth/request_token&#x27;;
-  options.accessTokenURL = options.accessTokenURL || &#x27;https://api.twitter.com/oauth/access_token&#x27;;
-  options.userAuthorizationURL = options.userAuthorizationURL || &#x27;https://api.twitter.com/oauth/authenticate&#x27;;
-  options.sessionKey = options.sessionKey || &#x27;oauth:twitter&#x27;;
+  options.requestTokenURL = options.requestTokenURL || 'https://api.twitter.com/oauth/request_token';
+  options.accessTokenURL = options.accessTokenURL || 'https://api.twitter.com/oauth/access_token';
+  options.userAuthorizationURL = options.userAuthorizationURL || 'https://api.twitter.com/oauth/authenticate';
+  options.sessionKey = options.sessionKey || 'oauth:twitter';
 
   OAuthStrategy.call(this, options, verify);
-  this.name = &#x27;twitter&#x27;;
-  this._userProfileURL = options.userProfileURL || &#x27;https://api.twitter.com/1.1/account/verify_credentials.json&#x27;;
+  this.name = 'twitter';
+  this._userProfileURL = options.userProfileURL || 'https://api.twitter.com/1.1/account/verify_credentials.json';
   this._skipExtendedUserProfile = (options.skipExtendedUserProfile !== undefined) ? options.skipExtendedUserProfile : false;
   this._includeEmail = (options.includeEmail !== undefined) ? options.includeEmail : false;
   this._includeStatus = (options.includeStatus !== undefined) ? options.includeStatus : true;
@@ -592,34 +585,34 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function OAuthStrategy(options, verify) {
-  if (typeof options == &#x27;function&#x27;) {
+  if (typeof options == 'function') {
     verify = options;
     options = undefined;
   }
   options = options || {};
 
-  if (!verify) { throw new TypeError(&#x27;OAuthStrategy requires a verify callback&#x27;); }
-  if (!options.requestTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a requestTokenURL option&#x27;); }
-  if (!options.accessTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a accessTokenURL option&#x27;); }
-  if (!options.userAuthorizationURL) { throw new TypeError(&#x27;OAuthStrategy requires a userAuthorizationURL option&#x27;); }
-  if (!options.consumerKey) { throw new TypeError(&#x27;OAuthStrategy requires a consumerKey option&#x27;); }
-  if (options.consumerSecret === undefined) { throw new TypeError(&#x27;OAuthStrategy requires a consumerSecret option&#x27;); }
+  if (!verify) { throw new TypeError('OAuthStrategy requires a verify callback'); }
+  if (!options.requestTokenURL) { throw new TypeError('OAuthStrategy requires a requestTokenURL option'); }
+  if (!options.accessTokenURL) { throw new TypeError('OAuthStrategy requires a accessTokenURL option'); }
+  if (!options.userAuthorizationURL) { throw new TypeError('OAuthStrategy requires a userAuthorizationURL option'); }
+  if (!options.consumerKey) { throw new TypeError('OAuthStrategy requires a consumerKey option'); }
+  if (options.consumerSecret === undefined) { throw new TypeError('OAuthStrategy requires a consumerSecret option'); }
 
   passport.Strategy.call(this);
-  this.name = &#x27;oauth&#x27;;
+  this.name = 'oauth';
   this._verify = verify;
 
-  // NOTE: The _oauth property is considered &#x22;protected&#x22;.  Subclasses are
+  // NOTE: The _oauth property is considered "protected".  Subclasses are
   //       allowed to use it when making protected resource requests to retrieve
   //       the user profile.
   this._oauth = new OAuth(options.requestTokenURL, options.accessTokenURL,
                           options.consumerKey,  options.consumerSecret,
-                          &#x27;1.0&#x27;, null, options.signatureMethod || &#x27;HMAC-SHA1&#x27;,
+                          '1.0', null, options.signatureMethod || 'HMAC-SHA1',
                           null, options.customHeaders);
 
   this._userAuthorizationURL = options.userAuthorizationURL;
   this._callbackURL = options.callbackURL;
-  this._key = options.sessionKey || &#x27;oauth&#x27;;
+  this._key = options.sessionKey || 'oauth';
   this._requestTokenStore = options.requestTokenStore || new SessionRequestTokenStore({ key: this._key });
   this._trustProxy = options.proxy;
   this._passReqToCallback = options.passReqToCallback;
@@ -658,12 +651,12 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">super_.InternalOAuthError.prototype.toString = function () {
   var m = this.name;
-  if (this.message) { m += &#x27;: &#x27; + this.message; }
+  if (this.message) { m += ': ' + this.message; }
   if (this.oauthError) {
     if (this.oauthError instanceof Error) {
       m = this.oauthError.toString();
-    } else if (this.oauthError.statusCode &#x26;&#x26; this.oauthError.data) {
-      m += &#x27; (status: &#x27; + this.oauthError.statusCode + &#x27; data: &#x27; + this.oauthError.data + &#x27;)&#x27;;
+    } else if (this.oauthError.statusCode &amp;&amp; this.oauthError.data) {
+      m += ' (status: ' + this.oauthError.statusCode + ' data: ' + this.oauthError.data + ')';
     }
   }
   return m;
@@ -682,7 +675,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">super_.prototype._createOAuthError = function (message, err) {
   var e;
-  if (err.statusCode &#x26;&#x26; err.data) {
+  if (err.statusCode &amp;&amp; err.data) {
     try {
       e = this.parseErrorResponse(err.data, err.statusCode);
     } catch (_) {}
@@ -712,7 +705,7 @@
     return done(null);
   }
 
-  if (typeof this._skipUserProfile == &#x27;function&#x27; &#x26;&#x26; this._skipUserProfile.length &#x3e; 1) {
+  if (typeof this._skipUserProfile == 'function' &amp;&amp; this._skipUserProfile.length &gt; 1) {
     // async
     this._skipUserProfile(token, tokenSecret, function(err, skip) {
       if (err) { return done(err); }
@@ -720,7 +713,7 @@
       return skipIt();
     });
   } else {
-    var skip = (typeof this._skipUserProfile == &#x27;function&#x27;) ? this._skipUserProfile() : this._skipUserProfile;
+    var skip = (typeof this._skipUserProfile == 'function') ? this._skipUserProfile() : this._skipUserProfile;
     if (!skip) { return loadIt(); }
     return skipIt();
   }
@@ -748,7 +741,7 @@
     consumerKey: this._oauth._consumerKey
   }
 
-  if (req.query &#x26;&#x26; req.query.oauth_token) {
+  if (req.query &amp;&amp; req.query.oauth_token) {
     // The request being authenticated contains an oauth_token parameter in the
     // query portion of the URL.  This indicates that the service provider has
     // redirected the user back to the application, after authenticating the
@@ -774,7 +767,7 @@
       var oauthVerifier = req.query.oauth_verifier || null;
 
       self._oauth.getOAuthAccessToken(oauthToken, oauthTokenSecret, oauthVerifier, function(err, token, tokenSecret, params) {
-        if (err) { return self.error(self._createOAuthError(&#x27;Failed to obtain access token&#x27;, err)); }
+        if (err) { return self.error(self._createOAuthError('Failed to obtain access token', err)); }
 
         function destroyed(err) {
           if (err) { return self.error(err); }
@@ -929,7 +922,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">super_.super_.prototype.authenticate = function (req, options) {
-  throw new Error(&#x27;Strategy#authenticate must be overridden by subclass&#x27;);
+  throw new Error('Strategy#authenticate must be overridden by subclass');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -972,7 +965,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">parse = function (json) {
-  if (&#x27;string&#x27; == typeof json) {
+  if ('string' == typeof json) {
     json = JSON.parse(json);
   }
 
@@ -995,7 +988,7 @@
  * @api public
  */
 exports.parse = function(json) {
-if (&#x27;string&#x27; == typeof json) {
+if ('string' == typeof json) {
   json = JSON.<span class="apidocCodeKeywordSpan">parse</span>(json);
 }
 
@@ -1055,34 +1048,34 @@ profile.displayName = json.name;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function OAuthStrategy(options, verify) {
-  if (typeof options == &#x27;function&#x27;) {
+  if (typeof options == 'function') {
     verify = options;
     options = undefined;
   }
   options = options || {};
 
-  if (!verify) { throw new TypeError(&#x27;OAuthStrategy requires a verify callback&#x27;); }
-  if (!options.requestTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a requestTokenURL option&#x27;); }
-  if (!options.accessTokenURL) { throw new TypeError(&#x27;OAuthStrategy requires a accessTokenURL option&#x27;); }
-  if (!options.userAuthorizationURL) { throw new TypeError(&#x27;OAuthStrategy requires a userAuthorizationURL option&#x27;); }
-  if (!options.consumerKey) { throw new TypeError(&#x27;OAuthStrategy requires a consumerKey option&#x27;); }
-  if (options.consumerSecret === undefined) { throw new TypeError(&#x27;OAuthStrategy requires a consumerSecret option&#x27;); }
+  if (!verify) { throw new TypeError('OAuthStrategy requires a verify callback'); }
+  if (!options.requestTokenURL) { throw new TypeError('OAuthStrategy requires a requestTokenURL option'); }
+  if (!options.accessTokenURL) { throw new TypeError('OAuthStrategy requires a accessTokenURL option'); }
+  if (!options.userAuthorizationURL) { throw new TypeError('OAuthStrategy requires a userAuthorizationURL option'); }
+  if (!options.consumerKey) { throw new TypeError('OAuthStrategy requires a consumerKey option'); }
+  if (options.consumerSecret === undefined) { throw new TypeError('OAuthStrategy requires a consumerSecret option'); }
 
   passport.Strategy.call(this);
-  this.name = &#x27;oauth&#x27;;
+  this.name = 'oauth';
   this._verify = verify;
 
-  // NOTE: The _oauth property is considered &#x22;protected&#x22;.  Subclasses are
+  // NOTE: The _oauth property is considered "protected".  Subclasses are
   //       allowed to use it when making protected resource requests to retrieve
   //       the user profile.
   this._oauth = new OAuth(options.requestTokenURL, options.accessTokenURL,
                           options.consumerKey,  options.consumerSecret,
-                          &#x27;1.0&#x27;, null, options.signatureMethod || &#x27;HMAC-SHA1&#x27;,
+                          '1.0', null, options.signatureMethod || 'HMAC-SHA1',
                           null, options.customHeaders);
 
   this._userAuthorizationURL = options.userAuthorizationURL;
   this._callbackURL = options.callbackURL;
-  this._key = options.sessionKey || &#x27;oauth&#x27;;
+  this._key = options.sessionKey || 'oauth';
   this._requestTokenStore = options.requestTokenStore || new SessionRequestTokenStore({ key: this._key });
   this._trustProxy = options.proxy;
   this._passReqToCallback = options.passReqToCallback;
@@ -1131,12 +1124,12 @@ profile.displayName = json.name;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
   var m = this.name;
-  if (this.message) { m += &#x27;: &#x27; + this.message; }
+  if (this.message) { m += ': ' + this.message; }
   if (this.oauthError) {
     if (this.oauthError instanceof Error) {
       m = this.oauthError.toString();
-    } else if (this.oauthError.statusCode &#x26;&#x26; this.oauthError.data) {
-      m += &#x27; (status: &#x27; + this.oauthError.statusCode + &#x27; data: &#x27; + this.oauthError.data + &#x27;)&#x27;;
+    } else if (this.oauthError.statusCode &amp;&amp; this.oauthError.data) {
+      m += ' (status: ' + this.oauthError.statusCode + ' data: ' + this.oauthError.data + ')';
     }
   }
   return m;
@@ -1178,7 +1171,7 @@ profile.displayName = json.name;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_createOAuthError = function (message, err) {
   var e;
-  if (err.statusCode &#x26;&#x26; err.data) {
+  if (err.statusCode &amp;&amp; err.data) {
     try {
       e = this.parseErrorResponse(err.data, err.statusCode);
     } catch (_) {}
@@ -1208,7 +1201,7 @@ profile.displayName = json.name;
     return done(null);
   }
 
-  if (typeof this._skipUserProfile == &#x27;function&#x27; &#x26;&#x26; this._skipUserProfile.length &#x3e; 1) {
+  if (typeof this._skipUserProfile == 'function' &amp;&amp; this._skipUserProfile.length &gt; 1) {
     // async
     this._skipUserProfile(token, tokenSecret, function(err, skip) {
       if (err) { return done(err); }
@@ -1216,7 +1209,7 @@ profile.displayName = json.name;
       return skipIt();
     });
   } else {
-    var skip = (typeof this._skipUserProfile == &#x27;function&#x27;) ? this._skipUserProfile() : this._skipUserProfile;
+    var skip = (typeof this._skipUserProfile == 'function') ? this._skipUserProfile() : this._skipUserProfile;
     if (!skip) { return loadIt(); }
     return skipIt();
   }
@@ -1244,7 +1237,7 @@ profile.displayName = json.name;
     consumerKey: this._oauth._consumerKey
   }
 
-  if (req.query &#x26;&#x26; req.query.oauth_token) {
+  if (req.query &amp;&amp; req.query.oauth_token) {
     // The request being authenticated contains an oauth_token parameter in the
     // query portion of the URL.  This indicates that the service provider has
     // redirected the user back to the application, after authenticating the
@@ -1270,7 +1263,7 @@ profile.displayName = json.name;
       var oauthVerifier = req.query.oauth_verifier || null;
 
       self._oauth.getOAuthAccessToken(oauthToken, oauthTokenSecret, oauthVerifier, function(err, token, tokenSecret, params) {
-        if (err) { return self.error(self._createOAuthError(&#x27;Failed to obtain access token&#x27;, err)); }
+        if (err) { return self.error(self._createOAuthError('Failed to obtain access token', err)); }
 
         function destroyed(err) {
           if (err) { return self.error(err); }
@@ -1346,14 +1339,14 @@ profile.displayName = json.name;
 
 #### Authenticate Requests
 
-Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;twitter&#x27;` strategy, to
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `'twitter'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-app.get(&#x27;/auth/twitter&#x27;,
-  passport.authenticate(&#x27;twitter&#x27;));
+app.get('/auth/twitter',
+  passport.authenticate('twitter'));
 ...</pre></li>
     </ul>
 
@@ -1433,7 +1426,7 @@ app.get(&#x27;/auth/twitter&#x27;,
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_createOAuthError = function (message, err) {
   var e;
-  if (err.statusCode &#x26;&#x26; err.data) {
+  if (err.statusCode &amp;&amp; err.data) {
     try {
       e = this.parseErrorResponse(err.data, err.statusCode);
     } catch (_) {}
@@ -1468,7 +1461,7 @@ app.get(&#x27;/auth/twitter&#x27;,
     return done(null);
   }
 
-  if (typeof this._skipUserProfile == &#x27;function&#x27; &#x26;&#x26; this._skipUserProfile.length &#x3e; 1) {
+  if (typeof this._skipUserProfile == 'function' &amp;&amp; this._skipUserProfile.length &gt; 1) {
     // async
     this._skipUserProfile(token, tokenSecret, function(err, skip) {
       if (err) { return done(err); }
@@ -1476,7 +1469,7 @@ app.get(&#x27;/auth/twitter&#x27;,
       return skipIt();
     });
   } else {
-    var skip = (typeof this._skipUserProfile == &#x27;function&#x27;) ? this._skipUserProfile() : this._skipUserProfile;
+    var skip = (typeof this._skipUserProfile == 'function') ? this._skipUserProfile() : this._skipUserProfile;
     if (!skip) { return loadIt(); }
     return skipIt();
   }
@@ -1509,7 +1502,7 @@ app.get(&#x27;/auth/twitter&#x27;,
     consumerKey: this._oauth._consumerKey
   }
 
-  if (req.query &#x26;&#x26; req.query.oauth_token) {
+  if (req.query &amp;&amp; req.query.oauth_token) {
     // The request being authenticated contains an oauth_token parameter in the
     // query portion of the URL.  This indicates that the service provider has
     // redirected the user back to the application, after authenticating the
@@ -1535,7 +1528,7 @@ app.get(&#x27;/auth/twitter&#x27;,
       var oauthVerifier = req.query.oauth_verifier || null;
 
       self._oauth.getOAuthAccessToken(oauthToken, oauthTokenSecret, oauthVerifier, function(err, token, tokenSecret, params) {
-        if (err) { return self.error(self._createOAuthError(&#x27;Failed to obtain access token&#x27;, err)); }
+        if (err) { return self.error(self._createOAuthError('Failed to obtain access token', err)); }
 
         function destroyed(err) {
           if (err) { return self.error(err); }
@@ -1611,14 +1604,14 @@ app.get(&#x27;/auth/twitter&#x27;,
 
 #### Authenticate Requests
 
-Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;twitter&#x27;` strategy, to
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `'twitter'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-app.get(&#x27;/auth/twitter&#x27;,
-  passport.authenticate(&#x27;twitter&#x27;));
+app.get('/auth/twitter',
+  passport.authenticate('twitter'));
 ...</pre></li>
     </ul>
 
@@ -1750,7 +1743,7 @@ app.get(&#x27;/auth/twitter&#x27;,
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
-  throw new Error(&#x27;Strategy#authenticate must be overridden by subclass&#x27;);
+  throw new Error('Strategy#authenticate must be overridden by subclass');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
       return cb(err, user);
@@ -1760,14 +1753,14 @@ app.get(&#x27;/auth/twitter&#x27;,
 
 #### Authenticate Requests
 
-Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;twitter&#x27;` strategy, to
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `'twitter'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-app.get(&#x27;/auth/twitter&#x27;,
-  passport.authenticate(&#x27;twitter&#x27;));
+app.get('/auth/twitter',
+  passport.authenticate('twitter'));
 ...</pre></li>
     </ul>
 
@@ -1786,7 +1779,7 @@ app.get(&#x27;/auth/twitter&#x27;,
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
-  throw new Error(&#x27;Strategy#authenticate must be overridden by subclass&#x27;);
+  throw new Error('Strategy#authenticate must be overridden by subclass');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
       return cb(err, user);
@@ -1796,14 +1789,14 @@ app.get(&#x27;/auth/twitter&#x27;,
 
 #### Authenticate Requests
 
-Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;twitter&#x27;` strategy, to
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `'twitter'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-app.get(&#x27;/auth/twitter&#x27;,
-  passport.authenticate(&#x27;twitter&#x27;));
+app.get('/auth/twitter',
+  passport.authenticate('twitter'));
 ...</pre></li>
     </ul>
 
@@ -1834,3 +1827,4 @@ app.get(&#x27;/auth/twitter&#x27;,
     ]
 </div>
 </div>
+</body></html>
