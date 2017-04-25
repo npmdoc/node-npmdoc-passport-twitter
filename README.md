@@ -1,6 +1,6 @@
 # npmdoc-passport-twitter
 
-#### api documentation for  [passport-twitter (v1.0.4)](https://github.com/jaredhanson/passport-twitter#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-passport-twitter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-passport-twitter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-passport-twitter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-passport-twitter)
+#### basic api documentation for  [passport-twitter (v1.0.4)](https://github.com/jaredhanson/passport-twitter#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-passport-twitter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-passport-twitter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-passport-twitter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-passport-twitter)
 
 #### Twitter authentication strategy for Passport.
 
@@ -79,7 +79,8 @@
     "scripts": {
         "test": "mocha --require test/bootstrap/node test/*.test.js"
     },
-    "version": "1.0.4"
+    "version": "1.0.4",
+    "bin": {}
 }
 ```
 
